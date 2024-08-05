@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0.1 (Python 3.12.2 on win32)" generated="2024-08-05T18:29:51.571784" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0.1 (Python 3.12.2 on win32)" generated="2024-08-05T20:36:49.889530" rpa="false" schemaversion="5">
 <suite id="s1" name="FrontOffice" source="C:\development\robot-scripts\Front-Office\tests\FrontOffice.robot">
 <test id="s1-t1" name="Should be able to access &quot;Team&quot; page" line="17">
 <kw name="Begin Test" owner="Common" type="SETUP">
 <kw name="Set Selenium Speed" owner="SeleniumLibrary">
 <arg>0.0000001s</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" start="2024-08-05T18:29:52.126644" elapsed="0.000000"/>
+<status status="PASS" start="2024-08-05T20:36:50.289193" elapsed="0.001000"/>
 </kw>
 <kw name="Set Selenium Timeout" owner="SeleniumLibrary">
-<arg>10s</arg>
+<arg>5s</arg>
 <doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" start="2024-08-05T18:29:52.127642" elapsed="0.000000"/>
+<status status="PASS" start="2024-08-05T20:36:50.290193" elapsed="0.000000"/>
 </kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-08-05T18:29:52.128640" level="INFO">Opening browser 'firefox' to base url 'https://automationplayground.com/front-office'.</msg>
-<msg time="2024-08-05T18:29:53.337268" level="WARN">The geckodriver version (0.34.0) detected in PATH at C:\bin\geckodriver.exe might not be compatible with the detected firefox version (92.0.0.7916); currently, geckodriver 0.31.0 is recommended for firefox 92.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2024-08-05T20:36:50.291193" level="INFO">Opening browser 'chrome' to base url 'https://automationplayground.com/front-office'.</msg>
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-08-05T18:29:52.127642" elapsed="12.704185"/>
+<status status="PASS" start="2024-08-05T20:36:50.291193" elapsed="9.688349"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-08-05T18:30:04.832830" elapsed="0.002013"/>
+<status status="PASS" start="2024-08-05T20:36:59.980543" elapsed="0.449018"/>
 </kw>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
-<status status="PASS" start="2024-08-05T18:29:52.123641" elapsed="12.712186"/>
+<doc>Open the browser and navigate to the start URL.</doc>
+<status status="PASS" start="2024-08-05T20:36:50.288193" elapsed="10.141368"/>
 </kw>
 <kw name="Verfiy Landing Page is Loaded" owner="FrontOfficeApp">
 <kw name="Verify Landing Page is Loaded" owner="LandingPage">
@@ -35,44 +35,50 @@
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>${INTRO_HEADLINE}</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-08-05T18:30:04.837826" elapsed="0.026998"/>
+<status status="PASS" start="2024-08-05T20:37:00.432561" elapsed="0.034001"/>
 </kw>
-<status status="PASS" start="2024-08-05T18:30:04.837826" elapsed="0.026998"/>
+<doc>Wait until the landing page intro heading is present.</doc>
+<status status="PASS" start="2024-08-05T20:37:00.432561" elapsed="0.035005"/>
 </kw>
-<status status="PASS" start="2024-08-05T18:30:04.836840" elapsed="0.027984"/>
+<doc>Verify that the landing page is loaded by checking the intro heading.</doc>
+<status status="PASS" start="2024-08-05T20:37:00.432561" elapsed="0.035005"/>
 </kw>
-<status status="PASS" start="2024-08-05T18:30:04.836840" elapsed="0.028986"/>
+<doc>Verify that the landing page is loaded by checking the intro heading.</doc>
+<status status="PASS" start="2024-08-05T20:37:00.431560" elapsed="0.036006"/>
 </kw>
 <kw name="Go to Team Page" owner="FrontOfficeApp">
 <kw name="Click on &quot;Team&quot; Page Link" owner="FrontOfficeApp">
 <kw name="Click on a link on the Top Nav" owner="TopNav">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-08-05T18:30:04.867828" level="INFO">Clicking element '//*[@id="bs-example-navbar-collapse-1"]/ul/li[5]/a'.</msg>
+<msg time="2024-08-05T20:37:00.507783" level="INFO">Clicking element '//*[@id="bs-example-navbar-collapse-1"]/ul/li[5]/a'.</msg>
 <arg>${link_href}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-05T18:30:04.866823" elapsed="0.250496"/>
+<status status="PASS" start="2024-08-05T20:37:00.472558" elapsed="0.134242"/>
 </kw>
 <arg>${TEAM_PAGE_LINK}</arg>
-<status status="PASS" start="2024-08-05T18:30:04.866823" elapsed="0.250496"/>
+<doc>Click on the provided link in the top navigation bar.</doc>
+<status status="PASS" start="2024-08-05T20:37:00.471558" elapsed="0.136239"/>
 </kw>
-<status status="PASS" start="2024-08-05T18:30:04.866823" elapsed="0.250496"/>
+<doc>Click on the Team Page link in the top navigation.</doc>
+<status status="PASS" start="2024-08-05T20:37:00.470558" elapsed="0.137239"/>
 </kw>
 <kw name="Verify Main Headline of The TeamPage" owner="TeamPage">
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-08-05T18:30:05.141308" level="INFO">${HEADLINE} = OUR AMAZING TEAM</msg>
+<msg time="2024-08-05T20:37:00.644801" level="INFO">${HEADLINE} = OUR AMAZING TEAM</msg>
 <var>${HEADLINE}</var>
 <arg>${HEADLINE_LOCATOR}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-08-05T18:30:05.118318" elapsed="0.022990"/>
+<status status="PASS" start="2024-08-05T20:37:00.607797" elapsed="0.037004"/>
 </kw>
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
 <arg>${HEADLINE}</arg>
 <arg>Our Amazing Team</arg>
 <arg>ignore_case=True</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2024-08-05T18:30:05.141308" elapsed="0.000998"/>
+<status status="PASS" start="2024-08-05T20:37:00.644801" elapsed="0.000994"/>
 </kw>
-<status status="PASS" start="2024-08-05T18:30:05.117319" elapsed="0.024987"/>
+<doc>Verify the main headline of the Team Page.</doc>
+<status status="PASS" start="2024-08-05T20:37:00.607797" elapsed="0.037998"/>
 </kw>
 <kw name="Verify TeamPage Is Highlighted" owner="TeamPage">
 <kw name="Verify TeamPage Is Highlighted in the Menu List" owner="TeamPage">
@@ -80,87 +86,95 @@
 <kw name="Check if the section in menu is active" owner="TopNav">
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-08-05T18:30:05.160318" level="INFO">Element 'xpath=//*[@id="bs-example-navbar-collapse-1"]/ul/li[5]' is displayed.</msg>
+<msg time="2024-08-05T20:37:00.763112" level="INFO">Element 'xpath=//*[@id="bs-example-navbar-collapse-1"]/ul/li[5]' is displayed.</msg>
 <arg>${active_list_locator}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-08-05T18:30:05.144318" elapsed="0.016000"/>
+<status status="PASS" start="2024-08-05T20:37:00.647791" elapsed="0.115321"/>
 </kw>
-<msg time="2024-08-05T18:30:05.161310" level="INFO">${result} = True</msg>
+<msg time="2024-08-05T20:37:00.763112" level="INFO">${result} = True</msg>
 <var>${result}</var>
 <arg>Element Should Be Visible</arg>
 <arg>${active_list_locator}</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2024-08-05T18:30:05.144318" elapsed="0.016992"/>
+<status status="PASS" start="2024-08-05T20:37:00.647791" elapsed="0.115321"/>
 </kw>
 <return>
 <value>${result}</value>
-<status status="PASS" start="2024-08-05T18:30:05.161310" elapsed="0.000000"/>
+<status status="PASS" start="2024-08-05T20:37:00.763112" elapsed="0.000000"/>
 </return>
-<msg time="2024-08-05T18:30:05.161310" level="INFO">${is_active} = True</msg>
+<msg time="2024-08-05T20:37:00.764112" level="INFO">${is_active} = True</msg>
 <var>${is_active}</var>
 <arg>${active_list_locator}</arg>
-<status status="PASS" start="2024-08-05T18:30:05.143317" elapsed="0.017993"/>
+<doc>Check if the provided menu item is active.</doc>
+<status status="PASS" start="2024-08-05T20:37:00.646792" elapsed="0.117320"/>
 </kw>
 <kw name="Check if the section in menu is enabled" owner="TopNav">
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>${enabled_list_locator}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2024-08-05T18:30:05.162317" elapsed="0.016002"/>
+<status status="PASS" start="2024-08-05T20:37:00.764112" elapsed="0.040003"/>
 </kw>
-<msg time="2024-08-05T18:30:05.178319" level="INFO">${result} = True</msg>
+<msg time="2024-08-05T20:37:00.805114" level="INFO">${result} = True</msg>
 <var>${result}</var>
 <arg>Wait Until Element Is Enabled</arg>
 <arg>${enabled_list_locator}</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2024-08-05T18:30:05.162317" elapsed="0.016002"/>
+<status status="PASS" start="2024-08-05T20:37:00.764112" elapsed="0.041002"/>
 </kw>
 <return>
 <value>${result}</value>
-<status status="PASS" start="2024-08-05T18:30:05.178319" elapsed="0.000000"/>
+<status status="PASS" start="2024-08-05T20:37:00.805114" elapsed="0.000000"/>
 </return>
-<msg time="2024-08-05T18:30:05.178319" level="INFO">${is_enabled} = True</msg>
+<msg time="2024-08-05T20:37:00.805114" level="INFO">${is_enabled} = True</msg>
 <var>${is_enabled}</var>
 <arg>${enabled_list_locator}</arg>
-<status status="PASS" start="2024-08-05T18:30:05.161310" elapsed="0.017009"/>
+<doc>Check if the provided menu item is enabled.</doc>
+<status status="PASS" start="2024-08-05T20:37:00.764112" elapsed="0.041002"/>
 </kw>
 <kw name="Should Be True" owner="BuiltIn">
 <arg>${is_active}</arg>
 <arg>The menu item is not active.</arg>
 <doc>Fails if the given condition is not true.</doc>
-<status status="PASS" start="2024-08-05T18:30:05.178319" elapsed="0.000998"/>
+<status status="PASS" start="2024-08-05T20:37:00.805114" elapsed="0.001015"/>
 </kw>
 <kw name="Should Be True" owner="BuiltIn">
 <arg>${is_enabled}</arg>
 <arg>The menu item is not enabled.</arg>
 <doc>Fails if the given condition is not true.</doc>
-<status status="PASS" start="2024-08-05T18:30:05.179317" elapsed="0.000000"/>
+<status status="PASS" start="2024-08-05T20:37:00.806129" elapsed="0.000000"/>
 </kw>
 <arg>${team_link_locator}</arg>
 <arg>${active_item_selector}</arg>
-<status status="PASS" start="2024-08-05T18:30:05.143317" elapsed="0.036000"/>
+<doc>Verify that the provided navigation menu item is active.</doc>
+<status status="PASS" start="2024-08-05T20:37:00.646792" elapsed="0.159337"/>
 </kw>
 <arg>${TEAM_LINK_LOCATOR}</arg>
 <arg>${ACTIVE_ITEM_SELECTOR}</arg>
-<status status="PASS" start="2024-08-05T18:30:05.142306" elapsed="0.037011"/>
+<status status="PASS" start="2024-08-05T20:37:00.645795" elapsed="0.160334"/>
 </kw>
-<status status="PASS" start="2024-08-05T18:30:05.142306" elapsed="0.037011"/>
+<doc>Verify that the Team Page link is highlighted in the menu.</doc>
+<status status="PASS" start="2024-08-05T20:37:00.645795" elapsed="0.160334"/>
 </kw>
-<status status="PASS" start="2024-08-05T18:30:04.865826" elapsed="0.313491"/>
+<doc>Navigate to the Team Page and verify it is loaded and highlighted in the menu.</doc>
+<status status="PASS" start="2024-08-05T20:37:00.468560" elapsed="0.337569"/>
 </kw>
 <kw name="End Test" owner="Common" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-08-05T18:30:05.181305" elapsed="2.945997"/>
+<status status="PASS" start="2024-08-05T20:37:00.807113" elapsed="2.262466"/>
 </kw>
-<status status="PASS" start="2024-08-05T18:30:05.180313" elapsed="2.946989"/>
+<doc>Close the browser.</doc>
+<status status="PASS" start="2024-08-05T20:37:00.807113" elapsed="2.262466"/>
 </kw>
+<doc>This test verifies that the "Team" page is accessible from the landing page.</doc>
 <tag>Regression</tag>
 <tag>Smoke</tag>
 <tag>Web Test</tag>
-<status status="PASS" start="2024-08-05T18:29:52.121643" elapsed="16.006659"/>
+<status status="PASS" start="2024-08-05T20:36:50.286196" elapsed="12.784384"/>
 </test>
-<status status="PASS" start="2024-08-05T18:29:51.575784" elapsed="16.555499"/>
+<doc>This suite tests the navigation bar functionality and various page elements of the Front Office application.</doc>
+<status status="PASS" start="2024-08-05T20:36:49.891537" elapsed="13.181043"/>
 </suite>
 <statistics>
 <total>
@@ -176,6 +190,5 @@
 </suite>
 </statistics>
 <errors>
-<msg time="2024-08-05T18:29:53.337268" level="WARN">The geckodriver version (0.34.0) detected in PATH at C:\bin\geckodriver.exe might not be compatible with the detected firefox version (92.0.0.7916); currently, geckodriver 0.31.0 is recommended for firefox 92.*, so it is advised to delete the driver in PATH and retry</msg>
 </errors>
 </robot>

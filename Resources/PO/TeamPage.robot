@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation
+Documentation   This file contains keywords related to the Team Page object.
 Library              SeleniumLibrary
 Resource           ./TopNav.robot
 *** Variables ***
@@ -9,11 +9,13 @@ ${ACTIVE_ITEM_SELECTOR}     css:#bs-example-navbar-collapse-1 > ul > li.active
 
 *** Keywords ***
 Verify Main Headline of The TeamPage
+    [Documentation]    Verify the main headline of the Team Page.
     ${HEADLINE} =   Get Text    ${HEADLINE_LOCATOR}
     Should Be Equal As Strings  ${HEADLINE}  Our Amazing Team  ignore_case=True
     #Wait Until Page Contains    ${HEADLINE}
 
 Verify TeamPage Is Highlighted
+    [Documentation]    Verify that the Team Page link is highlighted in the menu.
     Verify TeamPage Is Highlighted in the Menu List     ${TEAM_LINK_LOCATOR}   ${ACTIVE_ITEM_SELECTOR}
 
 Verify TeamPage Is Highlighted in the Menu List
