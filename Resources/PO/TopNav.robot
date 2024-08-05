@@ -3,10 +3,6 @@ Documentation   This file contains keywords related to the Top Navigation bar.
 Library         SeleniumLibrary
 
 
-*** Variables ***
-
-
-
 *** Keywords ***
 
 Verify Top Nav Active List
